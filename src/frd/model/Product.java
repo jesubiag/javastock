@@ -3,6 +3,7 @@ package frd.model;
 import java.util.List;
 
 public class Product {
+	private int id;
 	private String name;
 	private String description;
 	private List<Lot> lots;
@@ -31,6 +32,19 @@ public class Product {
 
 	public void setLots(List<Lot> lots) {
 		this.lots = lots;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String toString(){
+		return this.id + " name: " + this.name + " desc: " + this.description;
+	
 	}
 	
 }

@@ -16,14 +16,14 @@ public class JDBCManager {
 
 	// 4 POSGRESS
 	private static final String DB_DRIVER = "org.postgresql.Driver";
-	private static final String DB_CONNECTION = "jdbc:postgresql://127.0.0.1:5432/postgres";
+	private static final String DB_CONNECTION = "jdbc:postgresql://127.0.0.1:5433/postgres";
 
 	// 4 MYSQL
 	//private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 	//private static final String DB_CONNECTION = "jdbc:mysql://127.0.0.1:5432/dbname";
 	
 	private static final String DB_USER = "postgres";
-	private static final String DB_PASSWORD = "admin";
+	private static final String DB_PASSWORD = "postgres";
 	
 	protected static final DateFormat dateFormat = new SimpleDateFormat( "yyyy/MM/dd HH:mm:ss" );
 
