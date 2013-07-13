@@ -24,6 +24,18 @@ public class Main {
 				UserUI.del( scanIn );
 			}
 			
+			if( "p".equalsIgnoreCase(response)){
+				ProductUI.showAll();
+			}
+			
+			if( "p-add".equalsIgnoreCase(response)){
+				ProductUI.add(scanIn);
+			}
+			
+			if( "p-del".equalsIgnoreCase(response)){
+				ProductUI.del(scanIn);
+			}
+			
 			System.out.println(">");
 			response = scanIn.nextLine();
 		}
