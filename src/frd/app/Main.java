@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args){
 		System.out.println("*********** Iniciando ***********");
 		System.out.println("q:salir, u:listar usuarios, u-add:agregar usuario, u-del:borrar usuario");
-		
+		 
 		String response = scanIn.nextLine();
 		while( !"q".equalsIgnoreCase(response) ){
 
