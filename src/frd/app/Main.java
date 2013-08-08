@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args){
 		System.out.println("*********** Iniciando ***********");
-		System.out.println("q:salir, u:listar usuarios, u-add:agregar usuario, u-del:borrar usuario");
+		System.out.println("q:salir, \n u:listar usuarios, \n u-add:agregar usuario, \n u-del:borrar usuario, \n p:listar productos, \n p-add:agregar producto, \n p-del:eliminar producto");
 		 
 		String response = scanIn.nextLine();
 		while( !"q".equalsIgnoreCase(response) ){
@@ -24,15 +24,15 @@ public class Main {
 				UserUI.del( scanIn );
 			}
 			
-			if( "p".equalsIgnoreCase(response)){
+			if( "p".equalsIgnoreCase(response)){ //muestra listado de productos
 				ProductUI.showAll();
 			}
 			
-			if( "p-add".equalsIgnoreCase(response)){
+			if( "p-add".equalsIgnoreCase(response)){ //agrega un producto
 				ProductUI.add(scanIn);
 			}
 			
-			if( "p-del".equalsIgnoreCase(response)){
+			if( "p-del".equalsIgnoreCase(response)){ //elimina un producto
 				ProductUI.del(scanIn);
 			}
 			

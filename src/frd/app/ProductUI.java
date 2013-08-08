@@ -3,17 +3,16 @@ package frd.app;
 import java.sql.SQLException;
 import java.util.Scanner;
 import frd.db.ProductManager;
-import frd.db.UserManager;
-import frd.model.User;
+import frd.model.Product;
 
 public class ProductUI {
 
 	public static void showAll() {
 		System.out.println( "=================================" );
-		System.err.println( "ID | NAME | CREATOR | DATE" );
+		System.err.println( "ID | NAME | DESCRIPTION" );
 		try {
-			for( User u : UserManager.getUsers() ){
-				System.out.println( u.getId() + " | " + u.getUsername() + " | " + u.getCreatedBy() + " | " + u.getCreateDate() );
+			for( Product p : ProductManager.getProducts() ){
+				System.out.println( p.getId() + " | " + p.getName() + " | " + p.getDescription() );
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
