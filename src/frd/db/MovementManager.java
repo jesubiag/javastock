@@ -26,9 +26,10 @@ public class MovementManager extends JDBCManager {
 
 
 public static void insertMovement(int id , int amount) throws SQLException{
+	Date creation = new Date();
 	String insertTableSQL = "INSERT INTO DBUSER"
 		+ "(MOVEMENT_ID, CREATED_DATE, CREATED_AMOUNT) " + "VALUES"
-		+ "("+id+", '"+amount+"',+ "to_date('"
+		+ "(" + id + ", '" + amount + "', to_date('"
 		+ dateFormat.format(creation.getTime()) + "', 'yyyy/mm/dd hh24:mi:ss'))";
 	
 	executeUpdate( insertTableSQL );
