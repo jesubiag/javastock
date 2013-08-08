@@ -2,11 +2,9 @@ package frd.test;
 
 import java.sql.SQLException;
 import java.util.Date;
-
 import frd.db.LotManager;
-import frd.db.UserManager;
 import frd.model.Lot;
-import frd.model.User;
+
 
 public class TestDBLot {
 	public static void main( String[] args){
@@ -17,8 +15,8 @@ public class TestDBLot {
 			System.out.println( "Tabla Lots Creada!" );
 			
 			//cargo dos lots
-			LotManager.insertLot(1, new Date(), new Date() , 10);
-			LotManager.insertLot(2, new Date(), new Date() , 37);
+			LotManager.insertLot(1, "24/08/2013" , 10);
+			LotManager.insertLot(2, "05/12/1965" , 37);
 			System.out.println( "Dos Lots creados!" );
 			
 			//obtengo los lots de la bd

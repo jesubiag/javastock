@@ -2,6 +2,7 @@ package frd.db;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -29,14 +30,22 @@ public class LotManager extends JDBCManager {
 		execute( createTableSQL );
 	}
 	
-	public static void insertLot(int lotId, Date createDate, Date dueDate, double initialAmount) throws SQLException{
+	public static void insertLot(int lotId, String dueDate, double initialAmount) throws SQLException{
+		Date auxDate = new Date();
+		try {
+			auxDate = dateFormat.parse(dueDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String insertTableSQL = "INSERT INTO DBLOT" +
 						"(LOT_ID, CREATE_DATE, DUE_DATE, INITIAL_AMOUNT, CURRENT_AMOUNT)" +
 						"VALUES" +
-						"("+lotId+","+currentDate(createDate)+","+dueDate+","+initialAmount+","+initialAmount+")";	
+						"("+lotId+","+currentDate(new Date())+","+auxDate+","+initialAmount+","+initialAmount+")";	
 						// al principio, la cantidad actual es igual a la cantidad inicial
-				
+		
 		executeUpdate( insertTableSQL );
+		
 	}
 	
 	public static void updateLot(int lotId, Date createDate, Date dueDate, double currentAmount) throws SQLException{
