@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Lot {
+	private int id;
 	private Date createDate;
 	private Date dueDate;
 	private double initialAmount;
@@ -50,6 +51,14 @@ public class Lot {
 
 	public void setMovements(List<Movement> movements) {
 		this.movements = movements;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }
