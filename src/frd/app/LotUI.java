@@ -1,12 +1,9 @@
 package frd.app;
 
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 import frd.db.LotManager;
-import frd.db.UserManager;
 import frd.model.Lot;
 
 public class LotUI {

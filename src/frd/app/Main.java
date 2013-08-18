@@ -7,7 +7,8 @@ public class Main {
 
 	public static void main(String[] args){
 		System.out.println("*********** Iniciando ***********");
-		System.out.println("q:salir, \n u:listar usuarios, \n u-add:agregar usuario, \n u-del:borrar usuario, \n p:listar productos, \n p-add:agregar producto, \n p-del:eliminar producto");
+		System.out.println("q:salir, \n u:listar usuarios, \n u-add:agregar usuario, \n u-del:borrar usuario, \n p:listar productos, \n p-add:agregar producto, \n p-del:eliminar producto, \n" +
+				"l:listar lotes, \n l-add:agregar lote, \n l-del:borrar lote");
 		 
 		String response = scanIn.nextLine();
 		while( !"q".equalsIgnoreCase(response) ){
@@ -34,6 +35,18 @@ public class Main {
 			
 			if( "p-del".equalsIgnoreCase(response)){ //elimina un producto
 				ProductUI.del(scanIn);
+			}
+			
+			if( "l".equalsIgnoreCase(response) ){
+				LotUI.showAll();
+			}
+			
+			if( "l-add".equalsIgnoreCase(response) ){
+				LotUI.add(scanIn);
+			}
+			
+			if( "l-del".equalsIgnoreCase(response) ){
+				LotUI.del(scanIn);
 			}
 			
 			System.out.println(">");
