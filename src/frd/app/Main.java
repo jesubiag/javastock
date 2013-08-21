@@ -1,11 +1,19 @@
 package frd.app;
 
 import java.util.Scanner;
+import frd.app.ui.MainWindow;
 
 public class Main {
 	private static Scanner scanIn = new Scanner(System.in);
 
 	public static void main(String[] args){
+		// Inicio la interfaz de escritorio
+		(new MainWindow()).setVisible(true);
+
+		/*
+		 * Interfaz de usuario por consola
+		 * 
+
 		System.out.println("*********** Iniciando ***********");
 		System.out.println("q:salir, \n u:listar usuarios, \n u-add:agregar usuario, \n u-del:borrar usuario, \n p:listar productos, \n p-add:agregar producto, \n p-del:eliminar producto, \n" +
 				"l:listar lotes, \n l-add:agregar lote, \n l-del:borrar lote");
@@ -54,5 +62,6 @@ public class Main {
 		}
 		
         System.out.println("*********** Fin de app ***********");
+        */
 	}
 }
