@@ -22,8 +22,8 @@ public class LotManager extends JDBCManager {
 			"LOT_ID NUMERIC(5) NOT NULL, " +
 			"CREATE_DATE DATE NOT NULL, " +
 			"DUE_DATE DATE NOT NULL, " +
-			"INITIAL_AMOUNT NUMERIC(5)," +
-			"CURRENT_AMOUNT NUMERIC(5)" +
+			"INITIAL_AMOUNT NUMERIC(5), " +
+			"CURRENT_AMOUNT NUMERIC(5), " +
 			"PRIMARY KEY (LOT_ID)" +
 			")";
 		

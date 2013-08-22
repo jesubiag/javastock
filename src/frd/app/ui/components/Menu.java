@@ -8,6 +8,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import frd.app.ui.LotWindow;
 import frd.app.ui.UserWindow;
 
 
@@ -37,7 +38,18 @@ public class Menu extends JMenuBar {
 				new UserWindow();
 			}
 		});
+		
 		edit.add(users);
+		
+		JMenuItem lots = new JMenuItem("Lotes");
+		lots.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				new LotWindow();
+			}
+		});
+		
+		edit.add(lots);
 		
 		add(edit);
 		
